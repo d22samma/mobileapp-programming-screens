@@ -6,7 +6,7 @@ Skapa en ny tom aktivitet inom mappen `app`. Detta skapa två filer. En `java sc
 # Button inside first activity 
 Genom att placera in en knapp med ett `id` kallat button. första sidan består av en `constraitlayout` som leder till att knappen blev placerad centralt inom applikationen då den utgår ifrån 
 sidorna av layouten.
-```0ml
+```
 <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
@@ -23,7 +23,7 @@ sidorna av layouten.
 Genom att `identifiera knappen` med hjälp av knappens nämnda `id` inom xml filen. Detta skapar en `variabel` för elementet som motsvarar `id` namnet.
 Genom att skapa en `clicklistener` utförs koden som befinner sig mellan måsvingarna. I detta fall innebär detta att det skapas en `Intent 
 med extras` som motsvarar data. Detta görs med hjälp av `onclick`. `StartActivity('Intent')` Körs `Intent variabeln` som nämns inom koden. 
-```java
+```
         Button button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,12 +41,12 @@ att man kan definiera `collectvalue` värdet med hjälp av att hämta id som mot
 textview. Genom if satsen kontrolleras om de existerar
 några lagrade värden för att motverka `null` värden. sedan hämtar man ut extra datan ur den `lagrade datan` med hjälp av `extras.getstring("");`
 När man har hämtat datan kan man använda sig av `textview` variabeln för att lägga till en text komponent via `settext()`.
-```java
+```
         public class second_activity extends AppCompatActivity {
         private TextView collectvalue;
 ```
 
-```java
+```
         TextView collectvalue = (TextView) findViewById(R.id.textview);
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
