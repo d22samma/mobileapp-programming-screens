@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, second_activity.class);
                 intent.putExtra("food", "Potato"); // Optional
-                intent.putExtra("age", 1); // Optional
+                intent.putExtra("count", 1); // Optional
                 startActivity(intent);
 
                 setContentView(R.layout.activity_second);

@@ -21,9 +21,9 @@ public class second_activity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             String food = extras.getString("food");
-            int age = extras.getInt("age");
+            int count = extras.getInt("count");
 
-            collectvalue.setText(food+ " " + " " +age+ " hej");
+            collectvalue.setText(count+ " " + " " +food+ " left");
         }
 
         Button button2 = (Button) findViewById(R.id.button2);
