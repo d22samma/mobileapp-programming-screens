@@ -6,21 +6,26 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class second_activity extends AppCompatActivity {
     private Button btnClick;
-
-    Bundle extras = getIntent().getExtras();
-    if (extras != null) {
-        String name = extras.getString("name");
-        int number = extras.getInt("number");
-        // Do something with the name and number
-    }
+    private TextView collectvalue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
+
+        TextView collectvalue = (TextView) findViewById(R.id.textview);
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            String food = extras.getString("food");
+            int age = extras.getInt("age");
+
+            collectvalue.setText(food+ " " + " " +age+ " hej");
+        }
+
         Button button2 = (Button) findViewById(R.id.button2);
         button2.setOnClickListener(new View.OnClickListener() {
                 @Override
