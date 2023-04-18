@@ -15,7 +15,7 @@ public class second_activity extends AppCompatActivity {
         if (extras != null) {
             String name = extras.getString("food");
             int number = extras.getInt("age");
-            // Do something with the name and number
+
         }
     }
 }
